@@ -41,11 +41,6 @@ void ConsoleApp::log_tasks()
             // Формируем запись для истории
             std::stringstream input;
             input << "[" << level_to_str(task.level) << "] " << task.msg;
-            
-            // Формируем запись для истории
-            std::stringstream input;
-            input << "[" << level_to_str(task.level) << "] " \
-            << task.msg << " (" << status << ")";
             log_history.push_back(input.str());
 
             if (error != LoggerError::NONE)
